@@ -1,0 +1,368 @@
+{
+	"_meta": {
+		"sources": [
+			{
+				"json": "Pokemondimension",
+				"abbreviation": "poke",
+				"full": "Pokemon dimension",
+				"url": "",
+				"authors": [
+					"Brian"
+				],
+				"convertedBy": []
+			}
+		]
+	},
+	"monster": [
+		{
+			"name": "ARBOK",
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"source": "Pokemondimension",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				16
+			],
+			"hp": {
+				"formula": "12d10 + 36",
+				"average": 102
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 22,
+			"dex": 18,
+			"con": 16,
+			"int": 6,
+			"wis": 12,
+			"cha": 12,
+			"passive": 11,
+			"cr": "6",
+			"senses": [
+				"blindsight 10 ft."
+			],
+			"senseTags": [
+				"B"
+			],
+			"conditionImmune": [
+				"prone"
+			],
+			"resist": [
+				"poison"
+			],
+			"damageTags": [
+				"A",
+				"B",
+				"I",
+				"P"
+			],
+			"action": [
+				{
+					"name": "Acid spit",
+					"entries": [
+						"{@atk rw} {@hit 9} to hit, range 30/60 ft., one target. {@h}17 ({@damage 2d6 + 6}) acid damage."
+					]
+				},
+				{
+					"name": "Constrict (Constrictor Snake)",
+					"entries": [
+						"{@atk mw} {@hit +9} to hit, reach 5 ft., one creature. {@h}10 ({@damage 1d6+6}) bludgeoning damage, and the target is {@condition grappled} (escape {@dc 17}). Until this grapple ends, the creature is {@condition restrained}, and the arbok can't constrict another target."
+					]
+				},
+				{
+					"name": "Poison Bite",
+					"entries": [
+						"{@atk mw} {@hit +9} to hit, reach 10 ft., one creature. {@h}13 ({@damage 2d6 + 6}) piercing damage, and the target must succeed on a {@dc 14}  constitution saving throw or take {@h}21 ({@damage 6d6}) poison damage"
+					]
+				},
+				{
+					"name": "Frightful Presence (Dragon)",
+					"entries": [
+						"Each creature of the arbok's choice that is within 60 feet of the arbok can see it must succeed on a {@dc 12} Wisdom saving throw or become {@condition frightened} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the arbok's Frightful Presence for the next 24 hours."
+					]
+				}
+			],
+			"miscTags": [
+				"RW",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"frightened",
+				"grappled",
+				"restrained"
+			],
+			"actionTags": [
+				"Frightful Presence"
+			],
+			"tokenUrl": "https://www.pokemonunited.nl/img/dex/home/arbok.png",
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://www.pokemonunited.nl/img/dex/home/arbok.png"
+						}
+					}
+				]
+			}
+		},
+		{
+			"name": "RATTATTA",
+			"size": [
+				"T"
+			],
+			"type": "beast",
+			"source": "Pokemondimension",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"formula": "2d4 - 2",
+				"average": 3
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 6,
+			"dex": 14,
+			"con": 8,
+			"int": 6,
+			"wis": 10,
+			"cha": 8,
+			"passive": 10,
+			"cr": "1/8",
+			"damageTags": [
+				"P"
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit +4} to hit, reach 5 ft., one target. {@h}2 ({@damage 1d4}) piercing damage."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"tokenUrl": "https://www.pokemonunited.nl/img/dex/home/rattata.png",
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://www.pokemonunited.nl/img/dex/home/rattata.png"
+						}
+					}
+				]
+			}
+		},
+		{
+			"name": "Pidgeot",
+			"size": [
+				"M"
+			],
+			"type": "beast",
+			"source": "Pokemondimension",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"formula": "10d8 + 20",
+				"average": 65
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 50
+			},
+			"str": 12,
+			"dex": 18,
+			"con": 14,
+			"int": 6,
+			"wis": 14,
+			"cha": 10,
+			"passive": 14,
+			"cr": "3",
+			"save": {
+				"dex": "+6",
+				"wis": "+4"
+			},
+			"skill": {
+				"perception": "+4"
+			},
+			"trait": [
+				{
+					"name": "Keen Sight",
+					"entries": [
+						"The pidgeot has advantage on Wisdom ({@skill Perception}) checks that rely on sight."
+					]
+				},
+				{
+					"name": "Flyby",
+					"entries": [
+						"The pidgeot doesn't provoke opportunity attacks when it flies out of an enemy's reach."
+					]
+				}
+			],
+			"traitTags": [
+				"Flyby",
+				"Keen Senses"
+			],
+			"actionHeader": [
+				"Multiattock. Pidgeot makes two talon attacks."
+			],
+			"damageTags": [
+				"S"
+			],
+			"action": [
+				{
+					"name": "Tallon",
+					"entries": [
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}9 ({@damage 1d8 + 5}) slashing damage."
+					]
+				},
+				{
+					"name": "Sand attack",
+					"entries": [
+						"Pidgeot kicks up sand With its wings. All creatures",
+						"in a 15ft cone must make a {@dc 14} Constitution saving throw, or be {@condition blinded} until the end of their next turn"
+					]
+				},
+				{
+					"name": "Gust (Recharge 6).",
+					"entries": [
+						"Pidgeot beats its Wings and creates a whirlwind in a 15-foot radius column 60-feet tall within 15 feet of the pidgeot. Creatures within the area must make a {@dc 14} Dexterity saving throw or take ({@damage 6d6}) bludgeoning damage and be knocked {@condition prone} on a railed save, or half as much damage on a successful one. ",
+						"Pidgeot can maintain the whirlwind by spending an action on subsequent turns and staying withing 15 feet or the column. The column can be moved to any space within 15 feet or pidgeot on its tum. This effect requires  {@condition concentration}"
+					]
+				}
+			],
+			"miscTags": [
+				"MW",
+				"AOE"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"tokenUrl": "https://www.pokemonunited.nl/img/dex/home/pidgeot.png",
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://www.pokemonunited.nl/img/dex/home/pidgeot.png"
+						}
+					}
+				]
+			}
+		},
+		{
+			"name": "Victreebel",
+			"size": [
+				"M"
+			],
+			"type": "plant",
+			"source": "Pokemondimension",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"formula": "14d8 + 28",
+				"average": 91
+			},
+			"speed": {
+				"walk": 20
+			},
+			"str": 10,
+			"dex": 10,
+			"con": 10,
+			"int": 10,
+			"wis": 10,
+			"cha": 10,
+			"passive": 10,
+			"cr": "3",
+			"save": {
+				"str": "+14",
+				"dex": "+12",
+				"con": "+14",
+				"int": "+6",
+				"wis": "+10",
+				"cha": "+8"
+			},
+			"vulnerable": [
+				"fire"
+			],
+			"action": [
+				{
+					"name": "Acid",
+					"entries": [
+						"{@atk rw} {@hit 4} to hit, range 30/60 ft., one target. {@h}6 ({@damage 1d8 + 2}) acid damage."
+					]
+				},
+				{
+					"name": "Leaf blade",
+					"entries": [
+						"{@atk mw} {@hit 2} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) slashing damage."
+					]
+				},
+				{
+					"name": "Poison Powder (Recharge 5-6).",
+					"entries": [
+						"Al l non-plant creatures within",
+						"20 feet must make a {@dc 11} Constitution saving throw, taking",
+						"({@damage 4d6})  poison damage and being {(@condition {@condition paralyzed} )} for 1 minute on a",
+						"failure or half as much damage and no paralyzation on a",
+						"successful one. ",
+						"Targets may repeat the saving throw at the",
+						"end of each of their turns to end the paralyzation."
+					]
+				},
+				{
+					"name": "Swallow",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) acid damage. and if the target is medium sized or smaller it is {@condition grappled} and swallowed (escape {@dc 12}). Only one creature can be and swallowed at a time. While swallowed, the target takes ({@damage 2d8}) acid damage at the start of each of its turns. Escaping the grapple ends the swallowed condition."
+					]
+				}
+			],
+			"damageTags": [
+				"A",
+				"S"
+			],
+			"miscTags": [
+				"RW",
+				"MW"
+			],
+			"actionTags": [
+				"Swallow"
+			],
+			"tokenUrl": "https://i.pinimg.com/564x/76/60/58/7660581c37a2e0fa28faa93ddddaa163.jpg",
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://i.pinimg.com/564x/76/60/58/7660581c37a2e0fa28faa93ddddaa163.jpg"
+						}
+					}
+				]
+			}
+		}
+	]
+}
